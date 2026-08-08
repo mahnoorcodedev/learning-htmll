@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Chapter 6 - HTML Images</title>
+</head>
+
+<body>
+
+    <!-- ================================================== -->
+    <!-- CHAPTER 6: HTML IMAGES                             -->
+    <!-- ================================================== -->
+
+    <h1>Chapter 6: HTML Images</h1>
+
+    <p>
+        This webpage demonstrates different ways to use
+        images in HTML.
+    </p>
+
+
+    <!-- ================================================== -->
+    <!-- 1. BASIC IMAGE                                     -->
+    <!-- ================================================== -->
+
+    <h2>1. Basic Image</h2>
+
+    <img
+        src="images/cat.jpg"
+        alt="A cute cat"
+    >
+
+
+    <!-- ================================================== -->
+    <!-- 2. SRC ATTRIBUTE                                   -->
+    <!-- ================================================== -->
+
+    <h2>2. src Attribute</h2>
+
+    <p>
+        The src attribute specifies the location of the image.
+    </p>
+
+    <img
+        src="images/dog.jpg"
+        alt="A dog"
+    >
+
+
+    <!-- ================================================== -->
+    <!-- 3. ALT ATTRIBUTE                                   -->
+    <!-- ================================================== -->
+
+    <h2>3. alt Attribute</h2>
+
+    <img
+        src="images/bird.jpg"
+        alt="A colorful bird"
+    >
+
+    <p>
+        The alt attribute describes the image.
+        It is useful for accessibility and when an image
+        cannot be loaded.
+    </p>
+
+
+    <!-- ================================================== -->
+    <!-- 4. WIDTH AND HEIGHT                               -->
+    <!-- ================================================== -->
+
+    <h2>4. Width and Height</h2>
+
+    <img
+        src="images/lion.jpg"
+        alt="A lion"
+        width="300"
+        height="200"
+    >
+
+
+    <!-- ================================================== -->
+    <!-- 5. IMAGE TITLE                                    -->
+    <!-- ================================================== -->
+
+    <h2>5. Image Title</h2>
+
+    <img
+        src="images/cat.jpg"
+        alt="Cute Cat"
+        title="This is a cute cat"
+        width="300"
+    >
+
+    <p>
+        Move your mouse over the image to see the tooltip.
+    </p>
+
+
+    <!-- ================================================== -->
+    <!-- 6. RELATIVE IMAGE PATH                            -->
+    <!-- ================================================== -->
+
+    <h2>6. Relative Image Path</h2>
+
+    <p>
+        This image is loaded from the images folder
+        inside the project.
+    </p>
+
+    <img
+        src="images/dog.jpg"
+        alt="Dog"
+        width="300"
+    >
+
+
+    <!-- ================================================== -->
+    <!-- 7. ABSOLUTE IMAGE PATH                            -->
+    <!-- ================================================== -->
+
+    <h2>7. Absolute Image Path</h2>
+
+    <p>
+        An absolute path uses a complete URL.
+    </p>
+
+    <img
+        src="https://via.placeholder.com/300x200"
+        alt="Placeholder image"
+        width="300"
+        height="200"
+    >
+
+
+    <!-- ================================================== -->
+    <!-- 8. CLICKABLE IMAGE                                -->
+    <!-- ================================================== -->
+
+    <h2>8. Clickable Image</h2>
+
+    <p>
+        Click the image to open Google.
+    </p>
+
+    <a
+        href="https://www.google.com"
+        target="_blank"
+    >
+
+        <img
+            src="images/cat.jpg"
+            alt="Click to visit Google"
+            width="300"
+        >
+
+    </a>
+
+
+    <!-- ================================================== -->
+    <!-- 9. RESPONSIVE IMAGE                               -->
+    <!-- ================================================== -->
+
+    <h2>9. Responsive Image</h2>
+
+    <img
+        src="images/lion.jpg"
+        alt="Lion"
+        style="max-width: 100%; height: auto;"
+    >
+
+    <p>
+        max-width: 100% prevents the image from becoming
+        wider than its container.
+    </p>
+
+    <p>
+        height: auto keeps the correct aspect ratio.
+    </p>
+
+
+    <!-- ================================================== -->
+    <!-- 10. LAZY LOADING                                  -->
+    <!-- ================================================== -->
+
+    <h2>10. Lazy Loading</h2>
+
+    <img
+        src="images/dog.jpg"
+        alt="Dog"
+        width="300"
+        loading="lazy"
+    >
+
+    <p>
+        loading="lazy" delays loading the image until
+        it is close to becoming visible.
+    </p>
+
+
+    <!-- ================================================== -->
+    <!-- 11. PICTURE ELEMENT                               -->
+    <!-- ================================================== -->
+
+    <h2>11. Picture Element</h2>
+
+    <picture>
+
+        <source
+            media="(max-width: 600px)"
+            srcset="images/cat.jpg"
+        >
+
+        <source
+            media="(min-width: 601px)"
+            srcset="images/lion.jpg"
+        >
+
+        <img
+            src="images/lion.jpg"
+            alt="Responsive animal image"
+            style="max-width: 100%; height: auto;"
+        >
+
+    </picture>
+
+    <p>
+        The picture element allows the browser to choose
+        an appropriate image depending on the screen size.
+    </p>
+
+
+    <!-- ================================================== -->
+    <!-- 12. FIGURE AND FIGCAPTION                         -->
+    <!-- ================================================== -->
+
+    <h2>12. Figure and Figcaption</h2>
+
+    <figure>
+
+        <img
+            src="images/lion.jpg"
+            alt="Lion"
+            width="300"
+            title="King of the Jungle"
+            loading="lazy"
+            style="max-width: 100%; height: auto;"
+        >
+
+        <figcaption>
+            Lion - The King of the Jungle
+        </figcaption>
+
+    </figure>
+
+
+    <!-- ================================================== -->
+    <!-- 13. IMAGE GALLERY                                 -->
+    <!-- ================================================== -->
+
+    <h2>13. Image Gallery</h2>
+
+    <figure>
+
+        <img
+            src="images/cat.jpg"
+            alt="Cute Cat"
+            width="300"
+            title="Cute Cat"
+            loading="lazy"
+            style="max-width: 100%; height: auto;"
+        >
+
+        <figcaption>
+            Cute Cat
+        </figcaption>
+
+    </figure>
+
+
+    <figure>
+
+        <img
+            src="images/dog.jpg"
+            alt="Friendly Dog"
+            width="300"
+            title="Friendly Dog"
+            loading="lazy"
+            style="max-width: 100%; height: auto;"
+        >
+
+        <figcaption>
+            Friendly Dog
+        </figcaption>
+
+    </figure>
+
+
+    <figure>
+
+        <img
+            src="images/bird.jpg"
+            alt="Colorful Bird"
+            width="300"
+            title="Colorful Bird"
+            loading="lazy"
+            style="max-width: 100%; height: auto;"
+        >
+
+        <figcaption>
+            Colorful Bird
+        </figcaption>
+
+    </figure>
+
+
+    <figure>
+
+        <img
+            src="images/lion.jpg"
+            alt="Lion"
+            width="300"
+            title="Lion"
+            loading="lazy"
+            style="max-width: 100%; height: auto;"
+        >
+
+        <figcaption>
+            Lion
+        </figcaption>
+
+    </figure>
+
+
+    <!-- ================================================== -->
+    <!-- 14. IMAGE FORMATS                                 -->
+    <!-- ================================================== -->
+
+    <h2>14. Common Image Formats</h2>
+
+    <ul>
+
+        <li>
+            <strong>JPG/JPEG:</strong>
+            Best for photographs.
+        </li>
+
+        <li>
+            <strong>PNG:</strong>
+            Useful for transparency.
+        </li>
+
+        <li>
+            <strong>GIF:</strong>
+            Supports simple animations.
+        </li>
+
+        <li>
+            <strong>SVG:</strong>
+            Good for logos and scalable graphics.
+        </li>
+
+        <li>
+            <strong>WebP:</strong>
+            Modern format with good compression.
+        </li>
+
+    </ul>
+
+
+    <!-- ================================================== -->
+    <!-- 15. BEST PRACTICES                                -->
+    <!-- ================================================== -->
+
+    <h2>15. Image Best Practices</h2>
+
+    <ul>
+
+        <li>
+            Always use the <strong>alt</strong> attribute.
+        </li>
+
+        <li>
+            Use meaningful image filenames.
+        </li>
+
+        <li>
+            Resize very large images before uploading.
+        </li>
+
+        <li>
+            Use the correct image format.
+        </li>
+
+        <li>
+            Use responsive images when necessary.
+        </li>
+
+        <li>
+            Use lazy loading for images that are not immediately visible.
+        </li>
+
+    </ul>
+
+
+    <!-- ================================================== -->
+    <!-- 16. REAL-WORLD PROFILE EXAMPLE                   -->
+    <!-- ================================================== -->
+
+    <h2>16. Real-World Example</h2>
+
+    <figure>
+
+        <img
+            src="images/student-profile.jpg"
+            alt="Student profile picture"
+            width="250"
+            title="Student Profile"
+            loading="lazy"
+            style="max-width: 100%; height: auto;"
+        >
+
+        <figcaption>
+            Student Profile
+        </figcaption>
+
+    </figure>
+
+    <p>
+        Name: Mahnoor
+    </p>
+
+    <p>
+        Course: Web Development
+    </p>
+
+
+    <!-- ================================================== -->
+    <!-- 17. IMAGE WITH ALL IMPORTANT ATTRIBUTES           -->
+    <!-- ================================================== -->
+
+    <h2>17. Complete Image Example</h2>
+
+    <img
+        src="images/lion.jpg"
+        alt="Lion standing in the wild"
+        width="300"
+        height="200"
+        title="King of the Jungle"
+        loading="lazy"
+        style="max-width: 100%; height: auto;"
+    >
+
+
+    <!-- ================================================== -->
+    <!-- 18. IMAGE SUMMARY                                 -->
+    <!-- ================================================== -->
+
+    <h2>18. Image Attributes Summary</h2>
+
+    <table border="1">
+
+        <tr>
+            <th>Attribute / Element</th>
+            <th>Purpose</th>
+        </tr>
+
+        <tr>
+            <td>src</td>
+            <td>Specifies image location</td>
+        </tr>
+
+        <tr>
+            <td>alt</td>
+            <td>Provides alternative text</td>
+        </tr>
+
+        <tr>
+            <td>width</td>
+            <td>Sets image width</td>
+        </tr>
+
+        <tr>
+            <td>height</td>
+            <td>Sets image height</td>
+        </tr>
+
+        <tr>
+            <td>title</td>
+            <td>Displays a tooltip</td>
+        </tr>
+
+        <tr>
+            <td>loading="lazy"</td>
+            <td>Delays image loading</td>
+        </tr>
+
+        <tr>
+            <td>picture</td>
+            <td>Allows responsive image choices</td>
+        </tr>
+
+        <tr>
+            <td>figure</td>
+            <td>Groups image with related content</td>
+        </tr>
+
+        <tr>
+            <td>figcaption</td>
+            <td>Adds a caption to an image</td>
+        </tr>
+
+    </table>
+
+
+    <!-- ================================================== -->
+    <!-- END                                                -->
+    <!-- ================================================== -->
+
+    <h2>Chapter 6 Completed!</h2>
+
+    <p>
+        I have learned how to display images, use image
+        attributes, create clickable images, use responsive
+        images, lazy loading, picture, figure, and figcaption.
+    </p>
+
+</body>
+
+</html>
