@@ -1,0 +1,428 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chapter 5 - HTML Links</title>
+</head>
+
+<body>
+
+    <!-- ================================================== -->
+    <!-- CHAPTER 5: HTML LINKS                              -->
+    <!-- ================================================== -->
+
+    <h1 id="top">Chapter 5: HTML Links</h1>
+
+    <p>
+        This webpage demonstrates different types of HTML links.
+    </p>
+
+
+    <!-- ================================================== -->
+    <!-- 1. BASIC HYPERLINK                                 -->
+    <!-- ================================================== -->
+
+    <h2>1. Basic Hyperlink</h2>
+
+    <p>
+        <a href="https://www.google.com">
+            Visit Google
+        </a>
+    </p>
+
+
+    <!-- ================================================== -->
+    <!-- 2. EXTERNAL LINKS                                  -->
+    <!-- ================================================== -->
+
+    <h2>2. External Links</h2>
+
+    <p>
+        <a href="https://www.google.com">
+            Google
+        </a>
+    </p>
+
+    <p>
+        <a href="https://github.com">
+            GitHub
+        </a>
+    </p>
+
+    <p>
+        <a href="https://www.youtube.com">
+            YouTube
+        </a>
+    </p>
+
+
+    <!-- ================================================== -->
+    <!-- 3. TARGET ATTRIBUTE                                -->
+    <!-- ================================================== -->
+
+    <h2>3. Target Attribute</h2>
+
+    <!-- Opens in the same tab -->
+    <p>
+        <a href="https://www.google.com" target="_self">
+            Open Google in Same Tab
+        </a>
+    </p>
+
+    <!-- Opens in a new tab -->
+    <p>
+        <a href="https://www.google.com" target="_blank">
+            Open Google in New Tab
+        </a>
+    </p>
+
+
+    <!-- ================================================== -->
+    <!-- 4. INTERNAL LINKS                                  -->
+    <!-- ================================================== -->
+
+    <h2>4. Internal Links</h2>
+
+    <p>
+        Internal links connect pages within the same website.
+    </p>
+
+    <!-- These files should exist in the same folder -->
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="services.html">Services</a> |
+    <a href="contact.html">Contact</a>
+
+
+    <!-- ================================================== -->
+    <!-- 5. EMAIL LINK                                      -->
+    <!-- ================================================== -->
+
+    <h2>5. Email Link</h2>
+
+    <p>
+        <a href="mailto:example@gmail.com">
+            Send us an Email
+        </a>
+    </p>
+
+
+    <!-- ================================================== -->
+    <!-- 6. TELEPHONE LINK                                  -->
+    <!-- ================================================== -->
+
+    <h2>6. Telephone Link</h2>
+
+    <p>
+        <a href="tel:+923001234567">
+            Call Us
+        </a>
+    </p>
+
+
+    <!-- ================================================== -->
+    <!-- 7. DOWNLOAD LINK                                   -->
+    <!-- ================================================== -->
+
+    <h2>7. Download Link</h2>
+
+    <p>
+        <a href="resume.pdf" download>
+            Download Resume
+        </a>
+    </p>
+
+
+    <!-- ================================================== -->
+    <!-- 8. IMAGE AS A LINK                                 -->
+    <!-- ================================================== -->
+
+    <h2>8. Image as a Link</h2>
+
+    <a href="https://www.google.com" target="_blank">
+
+        <img
+            src="https://via.placeholder.com/200"
+            alt="Clickable Image"
+            width="200"
+            height="200"
+        >
+
+    </a>
+
+    <p>
+        Click the image to open Google.
+    </p>
+
+
+    <!-- ================================================== -->
+    <!-- 9. BOOKMARK / JUMP LINK                            -->
+    <!-- ================================================== -->
+
+    <h2>9. Bookmark Links</h2>
+
+    <p>
+        Click the link below to jump to the Contact Section.
+    </p>
+
+    <a href="#contact">
+        Go to Contact Section
+    </a>
+
+
+    <!-- ================================================== -->
+    <!-- 10. LONG PAGE CONTENT                              -->
+    <!-- ================================================== -->
+
+    <h2>10. Long Page Example</h2>
+
+    <p>
+        HTML links are used to connect different webpages.
+    </p>
+
+    <p>
+        Links can connect external websites, internal pages,
+        email addresses, phone numbers, files, and sections
+        of the same webpage.
+    </p>
+
+    <p>
+        This is some additional content to make the page longer.
+    </p>
+
+    <p>
+        Keep scrolling to reach the Contact Section.
+    </p>
+
+    <br><br><br><br><br>
+
+    <h2>More Information</h2>
+
+    <p>
+        You can use relative URLs for files inside your project.
+    </p>
+
+    <p>
+        You can use absolute URLs for complete website addresses.
+    </p>
+
+    <br><br><br><br><br>
+
+    <h2>Relative URL Example</h2>
+
+    <p>
+        <a href="about.html">
+            About Page
+        </a>
+    </p>
+
+    <p>
+        This is a relative URL because about.html is
+        inside the same project.
+    </p>
+
+    <h2>Absolute URL Example</h2>
+
+    <p>
+        <a href="https://www.google.com">
+            Visit Google
+        </a>
+    </p>
+
+    <p>
+        This is an absolute URL because it contains
+        the complete web address.
+    </p>
+
+    <br><br><br><br><br>
+
+
+    <!-- ================================================== -->
+    <!-- 11. CONTACT SECTION / BOOKMARK TARGET              -->
+    <!-- ================================================== -->
+
+    <h2 id="contact">Contact Section</h2>
+
+    <p>
+        Welcome to the Contact Section.
+    </p>
+
+    <p>
+        Email:
+        <a href="mailto:example@gmail.com">
+            example@gmail.com
+        </a>
+    </p>
+
+    <p>
+        Phone:
+        <a href="tel:+923001234567">
+            +92 300 1234567
+        </a>
+    </p>
+
+
+    <!-- ================================================== -->
+    <!-- 12. BACK TO TOP BOOKMARK                           -->
+    <!-- ================================================== -->
+
+    <p>
+        <a href="#top">
+            Back to Top
+        </a>
+    </p>
+
+
+    <!-- ================================================== -->
+    <!-- 13. REAL-WORLD NAVIGATION MENU                     -->
+    <!-- ================================================== -->
+
+    <h2>13. Real-World Navigation Menu</h2>
+
+    <nav>
+
+        <a href="index.html">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="services.html">Services</a> |
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+
+    <!-- ================================================== -->
+    <!-- 14. COMPLETE LINK EXAMPLES                         -->
+    <!-- ================================================== -->
+
+    <h2>14. Complete Link Examples</h2>
+
+    <!-- External link -->
+    <p>
+        <a href="https://www.github.com" target="_blank">
+            Visit GitHub
+        </a>
+    </p>
+
+    <!-- Internal link -->
+    <p>
+        <a href="about.html">
+            Read About Us
+        </a>
+    </p>
+
+    <!-- Email link -->
+    <p>
+        <a href="mailto:example@gmail.com">
+            Email Us
+        </a>
+    </p>
+
+    <!-- Telephone link -->
+    <p>
+        <a href="tel:+923001234567">
+            Call Us
+        </a>
+    </p>
+
+    <!-- Download link -->
+    <p>
+        <a href="resume.pdf" download>
+            Download Resume
+        </a>
+    </p>
+
+    <!-- Bookmark link -->
+    <p>
+        <a href="#contact">
+            Go to Contact
+        </a>
+    </p>
+
+
+    <!-- ================================================== -->
+    <!-- 15. LINK TYPES SUMMARY                             -->
+    <!-- ================================================== -->
+
+    <h2>15. Link Types Summary</h2>
+
+    <table border="1">
+
+        <tr>
+            <th>Link Type</th>
+            <th>Example</th>
+        </tr>
+
+        <tr>
+            <td>External</td>
+            <td>
+                <a href="https://www.google.com">
+                    Google
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Internal</td>
+            <td>
+                <a href="about.html">
+                    About
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Email</td>
+            <td>
+                <a href="mailto:example@gmail.com">
+                    Email
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Telephone</td>
+            <td>
+                <a href="tel:+923001234567">
+                    Call
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Download</td>
+            <td>
+                <a href="resume.pdf" download>
+                    Download
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Bookmark</td>
+            <td>
+                <a href="#contact">
+                    Contact
+                </a>
+            </td>
+        </tr>
+
+    </table>
+
+
+    <!-- ================================================== -->
+    <!-- END                                                -->
+    <!-- ================================================== -->
+
+    <h2>Chapter 5 Completed!</h2>
+
+    <p>
+        I have learned how to create
+        <strong>external, internal, email, telephone,
+        download, image, and bookmark links.</strong>
+    </p>
+
+</body>
+
+</html>
