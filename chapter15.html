@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Graphics</title>
+</head>
+<body>
+
+    <h1>HTML Graphics</h1>
+
+    <!-- Canvas -->
+    <h2>Canvas Graphics</h2>
+
+    <canvas id="myCanvas" width="500" height="300">
+        Your browser does not support Canvas.
+    </canvas>
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Blue Rectangle
+        ctx.fillStyle = "blue";
+        ctx.fillRect(30, 30, 150, 80);
+
+        // Red Circle
+        ctx.beginPath();
+        ctx.arc(280, 70, 50, 0, 2 * Math.PI);
+        ctx.fillStyle = "red";
+        ctx.fill();
+
+        // Black Line
+        ctx.beginPath();
+        ctx.moveTo(30, 150);
+        ctx.lineTo(400, 150);
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 3;
+        ctx.stroke();
+
+        // Text
+        ctx.font = "30px Arial";
+        ctx.fillStyle = "black";
+        ctx.fillText("HTML Graphics", 100, 220);
+    </script>
+
+
+    <!-- SVG -->
+    <h2>SVG Graphics</h2>
+
+    <svg width="500" height="300">
+
+        <!-- Rectangle -->
+        <rect
+            x="30"
+            y="30"
+            width="150"
+            height="80"
+            fill="blue">
+        </rect>
+
+        <!-- Circle -->
+        <circle
+            cx="280"
+            cy="70"
+            r="50"
+            fill="red">
+        </circle>
+
+        <!-- Line -->
+        <line
+            x1="30"
+            y1="150"
+            x2="400"
+            y2="150"
+            stroke="black"
+            stroke-width="3">
+        </line>
+
+        <!-- Triangle -->
+        <polygon
+            points="100,270 200,170 300,270"
+            fill="orange">
+        </polygon>
+
+        <!-- Text -->
+        <text
+            x="320"
+            y="220"
+            font-size="25"
+            fill="blue">
+            SVG Demo
+        </text>
+
+    </svg>
+
+    <h2>Canvas vs SVG</h2>
+
+    <p>
+        Canvas is best for games, animations, and frequently changing
+        graphics. SVG is best for logos, icons, diagrams, and graphics
+        that need to scale without losing quality.
+    </p>
+
+</body>
+</html>
