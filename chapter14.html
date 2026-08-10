@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Features</title>
+</head>
+<body>
+
+    <!-- Semantic HTML5 -->
+    <header>
+        <h1>HTML5 Features</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+    </nav>
+
+    <main>
+
+        <!-- Audio -->
+        <section>
+            <h2>Audio</h2>
+
+            <audio controls>
+                <source src="music.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
+        </section>
+
+        <!-- Video -->
+        <section>
+            <h2>Video</h2>
+
+            <video width="500" controls>
+                <source src="movie.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+        </section>
+
+        <!-- Canvas -->
+        <section>
+            <h2>Canvas</h2>
+
+            <canvas id="canvas"
+                    width="300"
+                    height="150">
+            </canvas>
+        </section>
+
+        <!-- SVG -->
+        <section>
+            <h2>SVG</h2>
+
+            <svg width="200" height="200">
+                <circle
+                    cx="100"
+                    cy="100"
+                    r="80"
+                    fill="blue">
+                </circle>
+            </svg>
+        </section>
+
+        <!-- Form -->
+        <section>
+            <h2>HTML5 Form</h2>
+
+            <form>
+                <input
+                    type="text"
+                    placeholder="Enter Name"
+                    required
+                    autofocus
+                    pattern="[A-Za-z]{3,}">
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Website</p>
+    </footer>
+
+    <script>
+        // Canvas
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 30, 200, 80);
+
+        // Local Storage
+        localStorage.setItem("name", "Mahnoor");
+
+        let name = localStorage.getItem("name");
+
+        console.log(name);
+    </script>
+
+</body>
+</html>
