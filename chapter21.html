@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML APIs</title>
+</head>
+<body>
+
+    <h1>HTML APIs Practice</h1>
+
+    <!-- Geolocation -->
+    <button onclick="getLocation()">Get Location</button>
+    <p id="location">Location not found.</p>
+
+    <!-- Local Storage -->
+    <button onclick="saveName()">Save Name</button>
+    <p id="name"></p>
+
+    <!-- Online/Offline -->
+    <p id="status"></p>
+
+    <!-- Drag and Drop -->
+    <div draggable="true"
+         ondragstart="drag(event)"
+         id="dragItem">
+        Drag Me
+    </div>
+
+    <br>
+
+    <div ondrop="drop(event)"
+         ondragover="allowDrop(event)"
+         style="border: 2px solid black; padding: 30px;">
+        Drop Here
+    </div>
+
+    <script>
+
+        // Geolocation
+        function getLocation() {
+            navigator.geolocation.getCurrentPosition(
+                function(position) {
+                    document.getElementById("location").innerHTML =
+                        "Latitude: " + position.coords.latitude +
+                        "<br>Longitude: " + position.coords.longitude;
+                },
+                function() {
+                    document.getElementById("location").innerHTML =
+                        "Location permission denied.";
+                }
+            );
+        }
+
+        // Local Storage
+        function saveName() {
+            localStorage.setItem("name", "Ali");
+            displayName();
+        }
+
+        function displayName() {
+            let name = localStorage.getItem("name");
+
+            if (name) {
+                document.getElementById("name").innerHTML =
+                    "Saved Name: " + name;
+            }
+        }
+
+        displayName();
+
+        // Online / Offline
+        function updateStatus() {
+            document.getElementById("status").innerHTML =
+                navigator.onLine ? "Online" : "Offline";
+        }
+
+        window.addEventListener("online", updateStatus);
+        window.addEventListener("offline", updateStatus);
+
+        updateStatus();
+
+        // Drag and Drop
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drag(event) {
+            event.dataTransfer.setData(
+                "text",
+                event.target.id
+            );
+        }
+
+        function drop(event) {
+            event.preventDefault();
+
+            let data = event.dataTransfer.getData("text");
+
+            event.target.appendChild(
+                document.getElementById(data)
+            );
+        }
+
+    </script>
+
+</body>
+</html>
